@@ -17,4 +17,4 @@ Extract the voltage and current values from a duplicated log file `lfile`:
 
 Now run the octave script:
 
-    octave-cli plot_volt_cur.m
+    octave-cli plot_volt_cur.m $lfile
