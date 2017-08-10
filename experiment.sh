@@ -4,11 +4,13 @@ echo "Empty log file (if this is a mistake, see /tmp/minicom.log)"
 cp ~/minicom.log /tmp
 truncate -s 0 ~/minicom.log 
 
-echo "Sleep 2 minutes"
+echo "Time: $(date '+%H:%M:%S')"
+echo "Sleep 2 minutes to collect samples"
 sleep 120
 
-mkdir -p logs/PACR01B2E
-export lfile="logs/PACR01B2E/$(date '+%Y%m%d')_${ename}.log"
+folder=logs/BACR01B1D
+mkdir -p $folder
+export lfile="$folder/$(date '+%Y%m%d')_${ename}.log"
 echo "Store results in file $lfile"
 cp ~/minicom.log $lfile
 
